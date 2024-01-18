@@ -31,8 +31,8 @@ describe('DOM', () => {
 
 	it('should have a number type of card image width and height attribute values', () => {
 		const cardImgEl = document.querySelector('.card__image img');
-		const cardImgWidth = cardImgEl.width;
-		const cardImgHeight = cardImgEl.height;
+		const cardImgWidth = parseInt(cardImgEl.getAttribute('width'));
+		const cardImgHeight = parseInt(cardImgEl.getAttribute('height'));
 
 		expect(cardImgWidth).toBeInstanceOf(Number);
 		expect(cardImgHeight).toBeInstanceOf(Number);
